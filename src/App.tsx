@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FirstCompany from "./data/empleyesCompany1.json";
 import SecondCompany from "./data/employesCompany2.json";
 import Employees from "./components/Employees";
@@ -76,6 +76,17 @@ export default function App() {
       setEmployeeSelectData(null);
     }
   };
+
+  useEffect( () => {
+    const metaThemeColor = document.querySelector('meta[name=theme-color]');
+    if(changeColorTheme){
+      metaThemeColor?.setAttribute("content", "00082f");
+      document.body.style.backgroundColor = "#00082f";
+    }else{
+      metaThemeColor?.setAttribute("content", "ffffff");
+      document.body.style.backgroundColor = "#ffffff";
+    }
+  },[changeColorTheme]);
 
   return (
     <div className={`w-full h-dvh md:h-[100%] md:p-4 flex justify-center items-center flex-col gap-8 ${changeColorTheme ? "bg-[#00082f]" : "#edf2ff" }`}>
