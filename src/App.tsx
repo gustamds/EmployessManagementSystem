@@ -80,8 +80,8 @@ export default function App() {
   return (
     <div className={`w-full h-dvh flex justify-center items-center flex-col gap-8 ${changeColorTheme ? "bg-[#00082f]" : "#edf2ff" }`}>
       <SwitchTheme changeTheme={changeColorTheme} setChangeTheme={setChangeColorTheme}/>
-      <h1 className={` font-bold text-3xl ${changeColorTheme ? "text-white" : "text-black"} `}>Employess Management System</h1>
-      <div className="justify-center items-center flex-row flex w-full gap-4">
+      <h1 className={` font-bold text-3xl text-center sm:text-xl ${changeColorTheme ? "text-white" : "text-black"} `}>Employess Management System</h1>
+      <div className="justify-center items-center flex-row md:flex-col flex w-full gap-4">
         <Employees
           employees={employesFirstCompany}
           selectedEmployee={employeeSelectedData}

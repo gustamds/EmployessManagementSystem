@@ -45,9 +45,9 @@ export default function ChangeCompany({
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col md:flex-row gap-4">
       <button
-        className={`flex justify-center items-center w-16 h-16 border border-solid border-white bg-[#4263eb] p-4 ${
+        className={`flex justify-center items-center w-16 h-16 border border-solid border-white bg-[#4263eb] p-4 md:rotate-90 ${
           !employeeSelected || currentCompany !== "CompanyOne"
             ? "cursor-not-allowed opacity-40 hover:bg-[#4263eb]"
             : ""
@@ -57,7 +57,7 @@ export default function ChangeCompany({
         <ArrowCircleRight size={48} color="#ffffff" />
       </button>
       <button
-        className={`flex justify-center items-center w-16 h-16 border border-solid border-white bg-[#4263eb] p-4 ${
+        className={`flex justify-center items-center w-16 h-16 border border-solid border-white bg-[#4263eb] p-4 md:rotate-90 ${
           !employeeSelected || currentCompany !== "CompanyTwo"
             ? "cursor-not-allowed opacity-40 hover:bg-[#4263eb]"
             : ""
